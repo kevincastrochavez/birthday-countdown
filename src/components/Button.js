@@ -1,7 +1,11 @@
 import React from "react";
 
-function Button({ title }) {
-  return <button className="button">{title}</button>;
+function Button({ title, callback }) {
+  return (
+    <button onClick={callback} className="button">
+      {title}
+    </button>
+  );
 }
 
 export default Button;

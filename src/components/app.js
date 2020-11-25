@@ -4,6 +4,27 @@ import Clock from "./Clock";
 import Picker from "./Picker";
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      active: false,
+    };
+  }
+
+  renderItems = function () {
+    if (this.state.active) {
+      return [<Clock />];
+    } else {
+      return (
+        <Button
+          title="Generate Countdown"
+          callback={() => this.setState({ active: true })}
+        />
+      );
+    }
+  }.bind(this);
+
   render() {
     return (
       <div className="grid">
@@ -18,9 +39,7 @@ export default class App extends Component {
 
         <Picker />
 
-        <Button title="Generate Countdown" />
-
-        <Clock />
+        {this.renderItems()}
       </div>
     );
   }
