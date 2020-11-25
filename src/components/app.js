@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "./Button";
+import ChangeDate from "./ChangeDate";
 import Clock from "./Clock";
 import Picker from "./Picker";
 
@@ -14,7 +15,13 @@ export default class App extends Component {
 
   renderItems = function () {
     if (this.state.active) {
-      return [<Clock />];
+      return [
+        <Clock />,
+        <ChangeDate
+          title="Change Date"
+          callback={() => this.setState({ active: false })}
+        />,
+      ];
     } else {
       return (
         <Button
