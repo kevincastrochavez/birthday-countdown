@@ -1,4 +1,5 @@
 .changeDate {
+  height: fit-content;
   grid-row: 2/3;
   grid-column: 4/5;
   justify-self: start;
@@ -9,9 +10,11 @@
   color: white;
   background-color: transparent;
   border: none;
-  transform: rotate(-69deg) translateY(-33px);
+  transform: rotate(-69deg) translate(-80px, -10px);
   font-family: "Roboto Condensed";
-  font-weight: 100;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
 }
 
 .MuiSvgIcon-root {

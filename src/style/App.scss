@@ -58,4 +58,16 @@
       grid-row: 4/5;
     }
   }
+
+  &__remaining {
+    grid-row: 4/-1;
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 18px;
+    color: $color-gray-one;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 20px;
+  }
 }
